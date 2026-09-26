@@ -25,8 +25,9 @@ This custom Bludit dashboard requires the [Configure 8 theme](https://github.com
 1. Install and activate the Configure 8 theme & plugin.
 2. Edit the Bludit init file (`bl-kernel\boot\init.php`) to add `define( 'CFE_DASHBOARD', true );`
 3. Replace the standard dashboard file (`bl-kernel\admin\views\dashboard.php`) with the dashboard file in this repository.
-4. Go to the Configure 8 options page in your site's admin. Find the "Custom Dashboard" option under the "General" tab.
-5. Select "Enabled" then save the form.
+4. Go to the Configure 8 options page in your site's admin.
+5. Find the "Custom Dashboard" option under the "General" tab.
+6. Select "Enabled" then save the form.
 
 ## Backup
 
