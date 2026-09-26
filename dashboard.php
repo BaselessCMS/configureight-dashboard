@@ -8,12 +8,21 @@
  * @since      1.0.0
  */
 
-$die = sprintf(
+$die_plugin = sprintf(
 	'Please install the Configure 8 <a href="https://github.com/BaselessCMS/configureight" target="_blank" rel="noopener noreferrer">theme</a> and its <a href="https://github.com/BaselessCMS/configureight-plugin" target="_blank" rel="noopener noreferrer">companion plugin</a>.'
 );
+$die_init = "Add <code>define( 'CFE_DASHBOARD', true );</code> to the Bludit init file (<code>bl-kernel\boot\init.php</code>).";
 
 if ( ! class_exists( 'configureight' ) ) {
-	die( $die );
+	die( $die_plugin );
+}
+
+if ( defined( 'CFE_DASHBOARD' ) ) {
+	if ( true != CFE_DASHBOARD ) {
+		die( $die_init );
+	}
+} else {
+	die( $die_init );
 }
 
 $configureight = new configureight();
